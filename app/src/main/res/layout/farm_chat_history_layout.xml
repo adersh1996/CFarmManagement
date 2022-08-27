@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/chat_history_layout"
+    android:background="@color/light_blue">
+
+    <RelativeLayout
+        android:id="@+id/chat_bubble_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp">
+
+        <TextView
+            android:id="@+id/chat_history_title_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="title msg"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:background="@drawable/outcoming_speech_bubble"
+            android:paddingLeft="20dp"
+            android:paddingTop="4dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/chat_history_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chat_history_title_msg"
+            android:text="Msg body"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:background="@drawable/outcoming_speech_bubble"
+            android:paddingLeft="20dp"
+            android:paddingTop="4dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/chat_history_img"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/chat_bubble_1"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/video_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_history_img"
+        android:visibility="gone"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:id="@+id/video_thumbnail"
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            />
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="100dp"
+            android:padding="30dp"
+            android:src="@drawable/play_icon" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/video_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:id="@+id/chat_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25-04-2020"
+            android:textColor="#9b9b9b"/>
+        <TextView
+            android:id="@+id/chat_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11:15:20"
+            android:textColor="#9b9b9b"/>
+    </LinearLayout>
+
+</RelativeLayout>

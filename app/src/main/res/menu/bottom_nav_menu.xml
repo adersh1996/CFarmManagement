@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_cattle"
+        android:title="Cattles"
+        android:icon="@drawable/cattle_icon" />
+
+    <item
+        android:id="@+id/navigation_milk"
+        android:title="Milk"
+        android:icon="@drawable/milk_icon"/>
+
+    <item
+        android:id="@+id/navigation_doctors"
+        android:title="Ask a Doc"
+        android:icon="@drawable/doc_icon" />
+    <item
+        android:id="@+id/navigation_seller"
+        android:title="Sell"
+        android:icon="@drawable/seller_icon" />
+    <item
+        android:id="@+id/navigation_profile"
+        android:title="Profile"
+        android:icon="@drawable/customer_profile_icon" />
+</menu>

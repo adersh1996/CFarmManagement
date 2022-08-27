@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">CFarmManagement</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="view_pregnancy_history_txt"><u>View Pregnancy History</u></string>
+    <string name="detailed_report_txt"><u>Detailed Report</u></string>
+    <string name="view_vaccination_history"><u>View Vaccination History</u></string>
+
+    <string-array name="district_names">
+        <item>Alappuzha</item>
+        <item>Ernakulam</item>
+        <item>Idukki</item>
+        <item>Kannur</item>
+        <item>Kasaragod</item>
+        <item>Kollam</item>
+        <item>Kottayam</item>
+        <item>Kozhikode</item>
+        <item>Malappuram</item>
+        <item>Palakkad</item>
+        <item>Pathanamthitta</item>
+        <item>Thiruvananthapuram</item>
+        <item>Thrissur</item>
+        <item>Wayanad</item>
+    </string-array>
+
+    <string-array name="source">
+        <item>External</item>
+        <item>Internal</item>
+    </string-array>
+
+
+    <string-array name="cattle_status">
+        <item>Milking</item>
+        <item>Dry</item>
+        <item>Calf</item>
+        <item>Bull</item>
+    </string-array>
+    <string-array name="edit_cattle_status">
+        <item>Milking</item>
+        <item>Dry</item>
+        <item>Dead</item>
+        <item>Sold</item>
+        <item>Calf</item>
+        <item>Bull</item>
+    </string-array>
+    <string name="notify_channel_id" translatable="false">MyDefaultChannelID</string>
+
+    <string name="notify_channel_name" translatable="false">MyDefaultChannelName</string>
+
+    <string name="notify_channel_description" translatable="false">MyDefaultChannelDescription</string>
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerHomeActivity">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/customer_home_nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/btm_nav_bg"
+        app:itemIconTint="@drawable/bottom_nav_icon"
+        app:itemTextColor="@color/black"
+        app:menu="@menu/customer_home_btm_nav_menu" />
+
+    <FrameLayout
+        android:id="@+id/customer_home_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/customer_home_nav_view"
+        android:background="@color/light_blue"/>
+</RelativeLayout>

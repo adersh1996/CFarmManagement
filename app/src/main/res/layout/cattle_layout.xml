@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soup.neumorphism.NeumorphCardView android:id="@+id/card_view2"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:elevation="24dp"
+    app:neumorph_shadowColorDark="#BDBABA"
+    app:neumorph_shadowColorLight="#FFFFFF"
+    app:neumorph_shapeType="flat"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+<LinearLayout
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical">
+   <ImageView
+       android:layout_width="50dp"
+       android:layout_height="50dp"
+       android:src="@drawable/cattle_icon"/>
+    <TextView
+        android:id="@+id/tagnotv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:text="165785678956" />
+</LinearLayout>
+</soup.neumorphism.NeumorphCardView>

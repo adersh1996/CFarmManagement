@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:context=".fragments.AddCattleFragment">
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:neumorph_shadowColorDark="@color/login_light_green"
+                app:neumorph_shadowColorLight="@color/light_blue"
+                app:neumorph_shapeType="basin">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="24dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="40dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="30dp">
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="TAG NO:">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/view_cattle_tag_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:text="Gender" />
+
+                            <RadioGroup
+                                android:id="@+id/view_cattle_gender_group"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/view_cattle_gender_male"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Male" />
+
+                                <RadioButton
+                                    android:id="@+id/view_cattle_gender_female"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Female" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="Breed">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/view_cattle_breed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="D.O.B.">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/view_cattle_dob"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="Weight">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/view_cattle_weight"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:weightSum="1">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/view_cattle_status"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:hint="Status"
+                                android:paddingLeft="12dp"
+                                />
+
+                            <Button
+                                android:id="@+id/view_cattle_status_del"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.4"
+                                android:backgroundTint="@color/theme_dark_color"
+                                android:text="Clear"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/parent_tag_til"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:hint="Parent Tag No">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/view_cattle_parent_tag_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                            <AutoCompleteTextView
+                                android:id="@+id/view_cattle_source"
+                                android:layout_marginTop="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:hint="Source"
+                                android:focusable="true" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/login_btn_layout"
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/layout_bg"
+                            android:elevation="8dp"
+                            android:layout_marginBottom="8dp">
+
+                            <TextView
+                                android:id="@+id/edit_cattle_bt"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="  E D I T  "
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/edit_submit_cattle_bt"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="  S U B M I T  "
+                                android:textColor="@color/black"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </soup.neumorphism.NeumorphCardView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/layout_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:neumorph_shadowColorDark="@color/login_light_green"
+                app:neumorph_shadowColorLight="@color/light_blue"
+                app:neumorph_shapeType="basin">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="24dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="20dp">
+
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Vaccination History"-->
+<!--                            android:textColor="@color/black" />-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="30dp"-->
+<!--                            android:layout_marginTop="10dp"-->
+<!--                            android:background="@color/theme_dark_color"-->
+<!--                            android:gravity="center"-->
+<!--                            android:orientation="horizontal"-->
+<!--                            android:weightSum="1">-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight=".5"-->
+<!--                                android:gravity="center"-->
+<!--                                android:text="Name Of Vaccine"-->
+<!--                                android:textColor="@color/black" />-->
+
+<!--                            <TextView-->
+<!--                                android:layout_width="0dp"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_weight=".5"-->
+<!--                                android:gravity="center"-->
+<!--                                android:text="Taken Date"-->
+<!--                                android:textColor="@color/black" />-->
+<!--                        </LinearLayout>-->
+
+<!--                        <androidx.recyclerview.widget.RecyclerView-->
+<!--                            android:id="@+id/vaccine_history_recycler"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_marginTop="10dp" />-->
+
+<!--                        <View-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="1dp"-->
+<!--                            android:background="@color/theme_dark_color"-->
+<!--                            android:layout_marginTop="10dp" />-->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="Mark Vaccination Data"
+                            android:textColor="@color/black" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:weightSum="1">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/select_vaccine"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:hint="Select Vaccine"
+                                android:paddingLeft="12dp" />
+
+                            <Button
+                                android:id="@+id/select_vaccine_del"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="0.4"
+                                android:backgroundTint="@color/theme_dark_color"
+                                android:text="Clear"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Select Date">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/vaccine_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="date"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/layout_bg"
+                            android:elevation="8dp">
+
+                            <TextView
+                                android:id="@+id/add_taken_vaccine_bt"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="  A D D  "
+                                android:textColor="@color/black" />
+                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/vaccination_history_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/view_vaccination_history"
+                            android:textSize="16sp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </soup.neumorphism.NeumorphCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pregnancy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/layout_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:neumorph_shadowColorDark="@color/login_light_green"
+                app:neumorph_shadowColorLight="@color/light_blue"
+                app:neumorph_shapeType="basin">
+
+                <!--                <androidx.core.widget.NestedScrollView-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="wrap_content">-->
+
+                <!--                    <LinearLayout-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:elevation="24dp"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:orientation="vertical"-->
+                <!--                        android:paddingLeft="20dp"-->
+                <!--                        android:paddingTop="20dp"-->
+                <!--                        android:paddingRight="20dp"-->
+                <!--                        android:paddingBottom="20dp">-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:text="Breeding History"-->
+                <!--                            android:textColor="@color/black" />-->
+
+                <!--                        <LinearLayout-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="30dp"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:background="@color/theme_dark_color"-->
+                <!--                            android:gravity="center"-->
+                <!--                            android:orientation="horizontal"-->
+                <!--                            android:weightSum="1">-->
+
+                <!--                            <TextView-->
+                <!--                                android:layout_width="0dp"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:layout_weight=".5"-->
+                <!--                                android:gravity="center"-->
+                <!--                                android:text="Breeding Date"-->
+                <!--                                android:textColor="@color/black" />-->
+
+                <!--                            <TextView-->
+                <!--                                android:layout_width="0dp"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:layout_weight=".5"-->
+                <!--                                android:gravity="center"-->
+                <!--                                android:text="Weaning Date"-->
+                <!--                                android:textColor="@color/black" />-->
+                <!--                        </LinearLayout>-->
+
+                <!--                        <androidx.recyclerview.widget.RecyclerView-->
+                <!--                            android:id="@+id/breeding_history_recycler"-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp" />-->
+                <!--                        <View-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="1dp"-->
+                <!--                            android:background="@color/theme_dark_color"-->
+                <!--                            android:layout_marginTop="10dp"/>-->
+
+                <!--                        <TextView-->
+                <!--                            android:layout_width="wrap_content"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:layout_marginTop="10dp"-->
+                <!--                            android:text="Mark Breeding Data"-->
+                <!--                            android:textColor="@color/black" />-->
+                <!--                        <com.google.android.material.textfield.TextInputLayout-->
+                <!--                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="wrap_content"-->
+                <!--                            android:hint="Select Breeding Date"-->
+                <!--                            android:layout_marginTop="10dp">-->
+
+                <!--                            <com.google.android.material.textfield.TextInputEditText-->
+                <!--                                android:id="@+id/breeding_date"-->
+                <!--                                android:layout_width="match_parent"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:inputType="date"-->
+                <!--                                android:cursorVisible="false"-->
+                <!--                                android:focusable="false"-->
+                <!--                                android:focusableInTouchMode="false"/>-->
+
+                <!--                        </com.google.android.material.textfield.TextInputLayout>-->
+                <!--                        <RelativeLayout-->
+                <!--                            android:layout_width="100dp"-->
+                <!--                            android:layout_height="40dp"-->
+                <!--                            android:layout_gravity="center_horizontal"-->
+                <!--                            android:layout_marginTop="20dp"-->
+                <!--                            android:background="@drawable/layout_bg"-->
+                <!--                            android:elevation="8dp">-->
+
+                <!--                            <TextView-->
+                <!--                                android:id="@+id/add_breeding_bt"-->
+                <!--                                android:layout_width="match_parent"-->
+                <!--                                android:layout_height="match_parent"-->
+                <!--                                android:gravity="center"-->
+                <!--                                android:text="  A D D  "-->
+                <!--                                android:textColor="@color/black" />-->
+                <!--                        </RelativeLayout>-->
+
+                <!--                    </LinearLayout>-->
+                <!--                </androidx.core.widget.NestedScrollView>-->
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/white">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:weightSum="1"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight=".5"
+                        android:background="@drawable/bt_bg"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/add_pregnancy_details_bt"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Add Pregnancy Details"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?android:attr/selectableItemBackground"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:background="@drawable/bt_bg"
+                    android:layout_margin="5dp">
+                    <TextView
+                        android:id="@+id/pregnancy_calc_bt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Pregnancy Calculator"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+
+
+                </LinearLayout>
+                    <TextView
+                        android:id="@+id/pregnancy_history_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/view_pregnancy_history_txt"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

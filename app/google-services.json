@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "710300896590",
+    "project_id": "cfarmmanagement",
+    "storage_bucket": "cfarmmanagement.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710300896590:android:f2c528ef278ef3c121221f",
+        "android_client_info": {
+          "package_name": "com.adarsh.cfarmmanagement"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710300896590-eatks4m4rr4h1pb93lgssf7j75i0u60h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsa2ZiYLZjj6l-mV2-JQfaFDiGZMcZ7Wo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710300896590-eatks4m4rr4h1pb93lgssf7j75i0u60h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

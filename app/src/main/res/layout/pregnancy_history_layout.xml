@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:layout_marginBottom="5dp"
+    android:background="@color/light_blue">
+    <TextView
+        android:id="@+id/breeding_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".33"
+        android:gravity="center"
+        tools:text="10-05-2022"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/calf_tag_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".33"
+        android:gravity="center"
+        tools:text="4587965232"
+        android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/calf_dob"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".34"
+        android:gravity="center"
+        tools:text="24-05-2022"
+        android:textColor="@color/black" />
+
+</LinearLayout>

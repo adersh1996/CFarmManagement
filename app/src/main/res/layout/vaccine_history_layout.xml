@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:layout_marginTop="5dp"
+    android:background="@color/light_blue">
+    <TextView
+        android:id="@+id/taken_vaccine_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Name Of Vaccine"
+        android:layout_weight=".5"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/vaccine_taken_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Taken Date"
+        android:layout_weight=".5"
+        android:gravity="center"
+        android:textColor="@color/black"/>
+</LinearLayout>

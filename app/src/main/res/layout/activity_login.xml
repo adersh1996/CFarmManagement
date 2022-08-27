@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/c_farm_login_img">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity">
+
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:elevation="12dp"
+            android:fontFamily="@font/abril_fatface"
+            android:letterSpacing=".1"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop" />
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageview"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingBottom="40dp"
+            app:neumorph_shadowColorDark="#B5C620"
+            app:neumorph_shadowColorLight="#DDE3F1"
+            app:neumorph_shapeType="basin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/login_background_grey"
+                android:elevation="24dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="40dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="40dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone"
+                    android:textColorHint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/phoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Password"
+                    android:textColorHint="@color/black">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+        </soup.neumorphism.NeumorphCardView>
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/card_view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:elevation="24dp"
+            app:neumorph_backgroundColor="@color/login_grey"
+            app:neumorph_shadowColorDark="@color/login_grey_two"
+            app:neumorph_shadowColorLight="@color/login_light_green"
+            app:neumorph_shapeType="flat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/login_grey"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <RadioGroup
+                    android:id="@+id/user_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/user_farm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="#0080B3"
+                        android:text="Farm"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/user_customer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:buttonTint="#0080B3"
+                        android:text="Customer"
+                        android:textColor="@color/black" />
+
+                    <RadioButton
+                        android:id="@+id/user_doctor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:buttonTint="#0080B3"
+                        android:text="Doctor"
+                        android:textColor="@color/black" />
+                </RadioGroup>
+            </LinearLayout>
+        </soup.neumorphism.NeumorphCardView>
+
+        <LinearLayout
+            android:id="@+id/login_btn_layout"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/card_view2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/new_button_bg_light_green"
+            android:elevation="8dp"
+            android:onClick="loginClick">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="L O G I N"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/register_tv_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login_btn_layout"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New User? Register as :"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@color/black"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/register_tv_layout"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <soup.neumorphism.NeumorphButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:onClick="farmRegistrationClick"
+                android:padding="30dp"
+                android:text="Farm"
+                android:textColor="@color/black"
+                app:neumorph_backgroundColor="@color/login_grey"
+                app:neumorph_shadowColorDark="@color/login_grey_two"
+                app:neumorph_shadowColorLight="@color/login_light_green" />
+
+            <soup.neumorphism.NeumorphButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".34"
+                android:gravity="center"
+                android:onClick="customerRegistrationClick"
+                android:padding="30dp"
+                android:text="Customer"
+                android:textColor="@color/black"
+                app:neumorph_backgroundColor="@color/login_grey"
+                app:neumorph_shadowColorDark="@color/login_grey_two"
+                app:neumorph_shadowColorLight="@color/login_light_green" />
+
+            <soup.neumorphism.NeumorphButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".3"
+                android:gravity="center"
+                android:onClick="doctorRegistrationClick"
+                android:padding="30dp"
+                android:text="Doctor"
+                android:textColor="@color/black"
+                app:neumorph_backgroundColor="@color/login_grey"
+                app:neumorph_shadowColorDark="@color/login_grey_two"
+                app:neumorph_shadowColorLight="@color/login_light_green" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

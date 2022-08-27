@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soup.neumorphism.NeumorphCardView
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/imageview"
+    android:layout_margin="2dp"
+    app:neumorph_shadowColorDark="@color/login_light_green"
+    app:neumorph_shadowColorLight="@color/light_blue"
+    app:neumorph_shapeType="flat"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="24dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8sp"
+                android:textColor="#fff"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/product_farm_iv"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="10dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/product_farm_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_farm_iv"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Amul Curd"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/product_farm_unit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_farm_tv"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="1 Unit"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+
+            />
+        <LinearLayout
+            android:id="@+id/price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/product_farm_unit">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:text="Rs "
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/product_farm_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="50.00"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+
+                />
+            <TextView
+                android:id="@+id/product_old_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="10dp"
+                android:textColor="#807A7A"
+                android:textSize="15sp"
+
+
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/product_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/price_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textColor="#807A7A"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</soup.neumorphism.NeumorphCardView>

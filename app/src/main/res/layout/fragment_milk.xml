@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MilkFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:text="Milk Production Summary "
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_margin="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/milk_det_report_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/neumorphCard"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:text="@string/detailed_report_txt"
+        android:textColor="@color/black" />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/neumorphCard"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="15dp"
+        app:neumorph_shadowColorDark="@color/login_light_green"
+        app:neumorph_shadowColorLight="@color/light_blue"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        app:neumorph_shapeType="basin">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.mdgiitr.suyash.graphkit.PieChart
+                android:id="@+id/grid_pie"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:textAlignment="center"
+                app:label_text_size="30" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total produced milk in Liters :"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:id="@+id/total_produced_milk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="5dp"/>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add_milk_float_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="@color/login_light_green"
+        android:text="ADD MILK DETAILS"
+        android:textColor="@color/black"
+        app:icon="@drawable/add_icon"
+        app:iconTint="@color/black" />
+    </RelativeLayout>

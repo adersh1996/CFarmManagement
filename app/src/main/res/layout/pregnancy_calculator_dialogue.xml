@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/dialogue_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age of Pregnancy"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto"/>
+            <TextView
+                android:id="@+id/age_ofPregnancy_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250 days"
+                android:textSize="22sp"
+                android:textColor="#000000"
+                android:fontFamily="@font/roboto"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expected Delivery Date"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/roboto"/>
+            <TextView
+                android:id="@+id/expected_delivery_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25-10-2020"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/roboto"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Breeding Date">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pregnancy_calc_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:gravity="center"
+            android:focusableInTouchMode="false"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/pregnancy_calc_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/cfarm_yellow"
+        android:text=" C A L C U L A T E"
+        android:textColor="#000000" />
+</LinearLayout>

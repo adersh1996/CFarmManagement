@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/light_blue">
+    
+    <soup.neumorphism.NeumorphCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:neumorph_shadowColorDark="@color/login_light_green"
+        app:neumorph_shadowColorLight="@color/light_blue"
+        app:neumorph_shapeType="basin"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/white">
+            <TextView
+                android:id="@+id/milk_report_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date                        : "
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/milk_report_produced_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/milk_report_date_tv"
+                android:layout_marginBottom="5dp"
+                android:text="Produced in Liters : " />
+
+            <TextView
+                android:id="@+id/milk_report_spoiled_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/milk_report_produced_tv"
+                android:text="Spoiled in Liters   : " />
+            <TextView
+                android:id="@+id/date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/milk_report_date_tv"
+                android:layout_alignBaseline="@id/milk_report_date_tv"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/produced_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/milk_report_produced_tv"
+                android:layout_alignBaseline="@id/milk_report_produced_tv"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/spolied_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/milk_report_spoiled_tv"
+                android:layout_alignBaseline="@id/milk_report_spoiled_tv"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"/>
+
+        </RelativeLayout>
+    </soup.neumorphism.NeumorphCardView>
+
+    
+    
+</RelativeLayout>
